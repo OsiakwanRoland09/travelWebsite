@@ -15,52 +15,35 @@
                 <li><a href="destinations.html">Destinations</a></li>
                 <li><a href="tips.html">Travel Tips</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="about.html">Ghana pics</a></li>
+                <li><a href="about.html">Ghana Pics</a></li>
             </ul>
         </nav>
     </header>
+    
     <main>
         <h2>Travel Memories</h2>
-        <p>Check out photos and videos from my travels.</p>
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <img src="travelpics/image1.jpg" style="width:100%">
-            </div>
-            <div class="mySlides fade">
-                <img src="travelpics/image2.jpg" style="width:100%">
-            </div>
-            <div class="mySlides fade">
-                <img src="travelpics/image3.jpg" style="width:100%">
-            </div>
-            <div class="mySlides fade">
-                <img src="travelpics/image4.jpg" style="width:100%">
-            </div>
-            <div class="mySlides fade">
-                <img src="travelpics/image5.jpg" style="width:100%">
-            </div>
-            <div class="mySlides fade">
-                <img src="travelpics/image6.jpg" style="width:100%">
-            </div>
+        <p>Check out photos from my travels.</p>
+
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="travelpics/image1.jpg" alt="Travel Image 1"></div>
+            <div class="gallery-item"><img src="travelpics/image2.jpg" alt="Travel Image 2"></div>
+            <div class="gallery-item"><img src="travelpics/image3.jpg" alt="Travel Image 3"></div>
+            <div class="gallery-item"><img src="travelpics/image4.jpg" alt="Travel Image 4"></div>
+            <div class="gallery-item"><img src="travelpics/image5.jpg" alt="Travel Image 5"></div>
+            <div class="gallery-item"><img src="travelpics/image6.jpg" alt="Travel Image 6"></div>
+            <div class="gallery-item"><img src="ghanapics/ghana pic 1.webp" alt="Travel Image 6"></div>
+            <div class="gallery-item"><img src="ghanapics/ghana pic 2.webp" alt="Travel Image 6"></div>
+            <div class="gallery-item"><img src="ghanapics/ghana pic 3.webp" alt="Travel Image 6"></div>
+            <div class="gallery-item"><img src="ghanapics/ghana pic4.webp" alt="Travel Image 6"></div>
+            <div class="gallery-item"><img src="ghanapics/ghana pic 5.jpg" alt="Travel Image 6"></div>
+            <div class="gallery-item"><img src="ghanapics/ghana pic 6.webp" alt="Travel Image 6"></div>
+            <div class="gallery-item"><img src="ghanapics/ghana pic 7.webp" alt="Travel Image 6"></div>
+            <div class="gallery-item"><img src="ghanapics/ghana pic 8.jpg" alt="Travel Image 6"></div>
         </div>
     </main>
+    
     <footer>
         <p>&copy; 2025 Travel Blog</p>
     </footer>
-    <script>
-        let slideIndex = 0;
-        showSlides();
-        
-        function showSlides() {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}    
-            slides[slideIndex-1].style.display = "block";  
-            setTimeout(showSlides, 3000); // Change image every 3 seconds
-        }
-        </script>
 </body>
 </html>

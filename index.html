@@ -7,22 +7,32 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <header>
-        <h1>Welcome to My Travel Blog</h1>
+        <h1>Welcome to Kofi's Travel Blog</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="destinations.html">Destinations</a></li>
                 <li><a href="tips.html">Travel Tips</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="about.html">Ghana pics</a></li>
+                <li><a href="about.html">Ghana Pics</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- Hero Section (bottom) -->
+    <section class="hero">
+        <h2>Explore the World, One Destination at a Time</h2>
+        <p>Discover travel destinations, tips, and breathtaking moments from my adventures.</p>
+        <a href="destinations.html" class="btn">Start Exploring</a>
+    </section>
+
     <main>
-        <!-- text in the main isnt showing on the site -->
         <h2>Latest Posts</h2>
         <p>Welcome to my travel blog! Here you'll find my latest travel experiences and tips.</p>
+
+        <!-- Slideshow -->
         <div class="slideshow-container">
             <div class="mySlides fade">
                 <img src="travelpics/image7.jpg" style="width:100%">
@@ -31,26 +41,47 @@
                 <img src="travelpics/image1.jpg" style="width:100%">
             </div>
             <div class="mySlides fade">
-                <img src="travelpics/image7.jpg" style="width:100%">
-            </div>
-            <div class="mySlides fade">
                 <img src="travelpics/image2.jpg" style="width:100%">
-            </div>
-            <div class="mySlides fade">
-                <img src="travelpics/image7.jpg" style="width:100%">
             </div>
             <div class="mySlides fade">
                 <img src="travelpics/image6.jpg" style="width:100%">
             </div>
         </div>
+
+        <!-- this takes me to other pages -->
+        <section class="grid-container">
+            <div class="grid-item">
+                <img src="travelpics/image3.jpg" alt="Destinations">
+                <h3><a href="destinations.html">Destinations</a></h3>
+                <p>Explore top travel destinations worldwide.</p>
+            </div>
+            <div class="grid-item">
+                <img src="travelpics/image2.jpg" alt="Travel Tips">
+                <h3><a href="tips.html">Travel Tips</a></h3>
+                <p>Get expert tips for hassle-free travel.</p>
+            </div>
+            <div class="grid-item">
+                <img src="travelpics/image1.jpg" alt="Gallery">
+                <h3><a href="gallery.html">Gallery</a></h3>
+                <p>Check out amazing travel photography.</p>
+            </div>
+            <div class="grid-item">
+                <img src="travelInformation/culture.webp" alt="Ghana Pics">
+                <h3><a href="about.html">Ghana Pics</a></h3>
+                <p>Explore the beauty of Ghana in pictures.</p>
+            </div>
+        </section>
+
     </main>
+
     <footer>
         <p>&copy; 2025 Travel Blog</p>
     </footer>
+
     <script>
         let slideIndex = 0;
         showSlides();
-        
+
         function showSlides() {
             let i;
             let slides = document.getElementsByClassName("mySlides");
@@ -60,8 +91,9 @@
             slideIndex++;
             if (slideIndex > slides.length) {slideIndex = 1}    
             slides[slideIndex-1].style.display = "block";  
-            setTimeout(showSlides, 3000); // Change image every 3 seconds
+            setTimeout(showSlides, 3000); 
         }
-        </script>
+    </script>
+
 </body>
 </html>

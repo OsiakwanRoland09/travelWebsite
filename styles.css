@@ -1,8 +1,13 @@
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: url('') no-repeat center center fixed; /*I'll put a background image in the string when need be*/
+    background-size: cover;
+    color: #333; 
+    background-color: #fff;
 }
 
 header {
@@ -12,34 +17,6 @@ header {
     text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-main {
-    padding: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
 nav ul {
     list-style: none;
     padding: 0;
@@ -63,26 +40,181 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #555;
 }
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
 img {
     width: 100%;
     max-width: 600px;
     margin: 20px auto;
-    display:flex;
+    display: flex;
     transition: transform 0.5s;
 }
 
 img:hover {
     transform: scale(1.1);
 }
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: url('path/to/your/background-image.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #fff;
+/* Container for image and text overlay */
+.img-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px; 
+    display: flex;
+    justify-content: center;
 }
 
-header, footer {
-    background-color: rgba(0, 0, 0, 0.7);
+/* Ensure images in the container are responsive */
+.img-container img {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px; 
+}
+
+/* Overlay text styling */
+.overlay-text {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%; 
+    max-width: 400px; 
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 15px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.tip {
+    text-align: center;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tip img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.tip h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.hero {
+    background: url('travelpics/hero.jpg') center/cover no-repeat;
+    color: white;
+    padding: 50px 20px;
+}
+
+.hero h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Grid Navigation */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-item {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.grid-item h3 a {
+    color: #0073e6;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.grid-item p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 10px 0;
+    margin-top: 20px;
 }
