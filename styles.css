@@ -1,4 +1,61 @@
+/* General styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
 
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping of nav items */
+    margin-top: 10px;
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center the navigation items */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+nav ul li {
+    margin: 5px 10px; /* Add some spacing between items */
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px; /* Add padding for better touch targets */
+    display: inline-block; /* Ensure links are clickable */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 20px; /* Adjust heading size for small screens */
+    }
+
+    nav ul {
+        justify-content: flex-start; /* Align items to the left on small screens */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Adjust link size for small screens */
+    }
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -156,7 +213,7 @@ img:hover {
 
 .hero {
     background: url('travelpics/hero.jpg') center/cover no-repeat;
-    color: white;
+    color: grey;
     padding: 50px 20px;
 }
 
